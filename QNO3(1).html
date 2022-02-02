@@ -1,0 +1,93 @@
+<html>
+    <title></title>
+<head>
+
+    <style>
+        .animation-div
+        {
+             width: 100px;
+             height: 100px;
+             background-color: red;
+             animation-name: example;
+             animation-duration: 4s;
+
+        }
+        div.krish1
+         {
+            width: 50px;
+            height: 70px;
+            float: left;
+            margin: 5px;
+            background: rgb(255,140,0);
+            cursor: pointer;
+         }
+
+    </style>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script>
+
+       $(function() {
+          $('.animation-div').addClass('hidden').hide();
+           $('.fade-out').click(function() {
+             if ($('.animation-div').hasClass('hidden')) {
+              $('.animation-div').removeClass('hidden').fadeIn(2000);
+            
+        }
+        else 
+        {
+            $('.animation-div').addClass('hidden').fadeOut(2000);
+        }
+    });
+    
+
+});
+
+    jQuery(document).ready(function(){
+       jQuery('.krish').on('click', function(event) {        
+        jQuery('.krish').toggle('show');
+    });
+});
+
+</script>
+   </head>
+    <body bgcolor="skyblue">
+     <div class="animation-div" id="animate-div" style="width:20vw, height=20vh, background-color="red">
+     </div>
+     <br></br>
+<!---click this button, show the -->
+          <div class="krish">
+             this is div
+          </div>
+         <br></br>
+         <!--on click button show the div-->
+           <div class='krish1'>
+            box
+
+         </div>
+
+        <input type="button" value="fade-out" class="fade-out" style="padding:1vw"/>
+       <br></br>
+       <input type="button" value="Show" class="increase-height" style="padding:1vw"/>
+       <br></br>
+<script>
+       $( "div.krish1" ).one( "click", function() {
+           $( this ).height( 100 ).css
+        ({
+            cursor: "auto",
+             backgroundColor: "green"
+        });
+           $( this ).width( 100 ).css
+        ({
+            cursor: "auto",
+             backgroundColor: "green"
+        });
+               $( this ).move-right( 100 ).css
+        ({
+                cursor: "auto",
+                 backgroundColor: "green"
+                });
+        });
+  </script>
+
+</body>
+</html>

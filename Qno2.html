@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>  </title>
+
+<script>
+    //javaScript code
+       function addrow()
+        {
+       //get input
+           var name=document.getElementById('Name1').value;
+           var age=document.getElementById('age1').value;
+           var city=document.getElementById('city1').value;
+        //get html table     
+          var table=document.getElementsByTagName('table')[0];
+          var newRow = table.insertRow(1);
+      //addcell
+           var row = table.insertRow(-1);
+
+            var cel1=newRow.insertCell(0);
+            var cel2=newRow.insertCell(1);
+            var cel3=newRow.insertCell(2);
+
+             cel1.innerHTML=name;
+             cel2.innerHTML=age;
+             cel3.innerHTML=city;
+
+
+  }
+</script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        //Add column button,which adds a row in new table  using jquery 
+        $(".addcols").click(function(){
+          $('#tbl1 tr').append(function(){
+            $(this).append('<td style="width:70px";></td>');
+          });   
+        });
+</script>
+</head>
+<body>
+  Name:<input type="text" placeholder="enter name" name="Name" id="Name1"/><br></br>
+  Age:<input type="text" placeholder="enter age" name="age" id="age1"/><br></br>
+   city:<input type="text" placeholder="enter city" name="city" id="city1"/><br></br>
+
+   <button onclick="addrow();">Add row</button>
+   <button class="addcols" onclick="addcols();">Add coloumn</button>
+   <table id="tbl1" border="1" bgcolor="pink" hight="200px" width="500px" cellspacing="0" cellpadding="20px" >
+
+   <caption> Student information </caption>
+<tr>
+<th> Name </th>
+<th> Age </th>
+<th> City</th>
+
+</tr>
+
+<tr>
+<td> ketan </td>
+<td>25 </td>
+<td> pune</td>
+
+</tr>
+
+<tr>
+<td>mayur </td>
+<td> 26</td>
+<td> Jalna</td>
+
+</tr>
+<tr>
+<td>rahul</td>
+<td>27</td>
+<td>Aurangabad</td>
+</tr>
+
+</table>
+</body>
+</html>

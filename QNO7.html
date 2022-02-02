@@ -1,0 +1,37 @@
+<html>
+  
+<head>
+    
+    <title>
+        Demo
+    </title>
+  
+    <style>
+        .Demo {
+            position: absolute;
+            background: red;
+            width: 300px;
+            height: 250px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+  
+<body>
+    <div class="Demo"></div>
+  
+    <script type="text/javascript">
+          var color = ["red", "yellow"];
+  
+            document.querySelector("div").addEventListener(
+                    "mouseover", function () {
+  
+            document.querySelector("div").style.background 
+                = color[Math.floor(Math.random() * color.length)];
+        })
+    </script>
+</body>
+  
+</html>

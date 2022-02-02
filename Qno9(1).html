@@ -1,0 +1,58 @@
+<html>
+<head>
+<title></title>
+
+<style>
+  #main-outer{
+  
+      width:300px;
+      height: 200px;
+      background-color: green;
+  }
+  
+  #outer{
+  
+  width:300px;
+  height: 200px;
+  background-color: blue;
+  float:left;
+  }
+  
+  </style>
+</head>
+
+
+<body>
+    <h1> jquery</h1>
+    <input type="button" value="Hide" id='main-outer' style="position: absolute;left:6%">
+    
+    <input type="button" value="show" id='outer' style="position: absolute;left: 6%;">
+    <div id="main-outer">
+        <h1>main outer</h1>
+        
+        <div id="outer">
+            <h2>outer</h2>
+          <div id="inner">
+              <h2 id="id-head">Inner</h2>
+          <div>A</div>
+          <div>B</div>
+          <div id="Child-c">C</div>
+          <div>D</div>
+
+          </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+      <script>
+         $(document).ready(function()
+         {
+          $("#button1").click(function(){
+           $("#child").parent().css({"color": "red", "border": "2px solid red"});
+
+           });
+         });
+    </script>
+
+</body>
+<html>
